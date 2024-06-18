@@ -11,7 +11,22 @@
         <form action="" method="post">
             <div class="row justify-content-center">
                 <div class="col-4">
-
+                    <label for="username">아이디</label>
+                    <input type="text" class="form-control" name="username" id="username">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <label for="password">비밀번호</label>
+                    <input type="password" class="form-control" name="password" id="password">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-2" text-center>
+                    <input type="submit" class="btn btn-outline-primary" value="로그인">
+                </div>
+                <div class="col-2" text-center>
+                    <a href="" class="btn btn-outline-secondary">회원가입</a>
                 </div>
             </div>
         </form>
