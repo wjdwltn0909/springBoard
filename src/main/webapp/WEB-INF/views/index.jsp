@@ -33,6 +33,4 @@
     </div>
 </div>
 </body>
-<h1>Hello, WORLD!!!</h1>
-<h2>지금 수정</h2>
 </html>

@@ -36,4 +36,11 @@ public class UserService {
         return SESSION.selectOne(NAMESPACE+".auth", attempt);
     }
 
+    public boolean validateUsername(UserDTO attempt) {
+        return SESSION.selectOne(NAMESPACE + ".selectByUsername", attempt) == null;
+    }
+
+    public void register(UserDTO attempt) { // 이미 validateUsername을 통해 중복 확인한 후 register진행하기 때문에 void
+        SESSION.insert(NAMESPACE + ".register", attempt);
+    }
 }

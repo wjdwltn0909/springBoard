@@ -5,5 +5,6 @@
 <configuration>
     <typeAliases>
         <typeAlias type="com.nc13.springBoard.model.UserDTO" alias="userDTO"/>
+        <typeAlias type="com.nc13.springBoard.model.BoardDTO" alias="boardDTO"/>
     </typeAliases>
 </configuration>
