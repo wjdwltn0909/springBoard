@@ -2,8 +2,10 @@ package com.nc13.springBoard.controller;
 
 import com.nc13.springBoard.model.UserDTO;
 import com.nc13.springBoard.service.UserService;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -23,11 +25,25 @@ public class UserController {
     // 파라미터를 적어주면 된다.
     // 또한, 해당 name 어트리뷰트를 가진 클래스 객체를 파라미터로 잡아주면
     // 자동으로 데이터가 바인딩 된다. *** 데이터까지 담당하면 단일책임원칙에서 어긋난다. -> service 파일 만드는 이유
-    public String auth(UserDTO userDTO) {
+    public String auth(UserDTO userDTO, HttpSession session) {
         UserDTO result = userService.auth(userDTO);
-        System.out.println(result);
+        if (result != null) {
+            session.setAttribute("logIn", result);
+        }
 
         // 만약 우리가 해당 메소드를 실행시키고 나서 특정 URL로 이동시킬 때에는 다음과 같이 적어준다.
+        return "redirect:/";
+    }
+
+    @GetMapping("register")
+    public String showRegister(){
+        return "user/register";
+    }
+
+    @PostMapping("register")
+    public String register(UserDTO userDTO) {
+        System.out.println(userDTO);
+
         return "redirect:/";
     }
 }

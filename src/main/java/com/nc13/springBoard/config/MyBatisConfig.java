@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 // 그런 후에 (3) mybatis에서 쿼리를 실행시킬 객체들을 스프링이 관리할 수 있도록
 // 클래스를 만들어서 관리를 하게 된다.
 public class MyBatisConfig {
-    // (1) 컴트폴러, 서비스, 컨피겨레이션 같이 스프링 프레임워크가 직접 관리하는
+    // (1) 컨트롤러, 서비스, 컨피겨레이션 같이 스프링 프레임워크가 직접 관리하는
     // 객체들 중 특수한 성격을 띄는 친구들은 우리가 직접 @Controller @Service'
     // 같은 어노테이션을 붙여주지만 만약 스프링 프레임워크가 직접 관리해야할 객체들 중
 
@@ -35,7 +35,7 @@ public class MyBatisConfig {
     }
 
     @Bean
-    public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) throws Exception {
+    public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) throws Exception { // 초기화에 사용
         return new SqlSessionTemplate(sqlSessionFactory);
     }
 

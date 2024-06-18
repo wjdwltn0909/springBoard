@@ -3,7 +3,8 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.nc13.mappers.UserMapper">
-    <select id="auth" parameterType="com.nc13.springBoard.model.UserDTO" resultType="com.nc13.springBoard.model.UserDTO">
+    <select id="auth" parameterType="userDTO" resultType="userDTO">;
+        <!--여기 부분 코드 확인할것 -->
         SELECT * FROM user
         WHERE username = #{username} AND
         password = #{password}

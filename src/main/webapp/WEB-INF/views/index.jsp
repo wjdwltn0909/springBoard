@@ -26,7 +26,7 @@
                     <input type="submit" class="btn btn-outline-primary" value="로그인">
                 </div>
                 <div class="col-2" text-center>
-                    <a href="" class="btn btn-outline-secondary">회원가입</a>
+                    <a href="/user/register" class="btn btn-outline-secondary">회원가입</a>
                 </div>
             </div>
         </form>
