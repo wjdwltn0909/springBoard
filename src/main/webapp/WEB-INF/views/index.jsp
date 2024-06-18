@@ -8,7 +8,7 @@
 <body>
 <div class="container-fluid">
     <div class="main h-100">
-        <form action="" method="post">
+        <form action="/user/auth" method="post">
             <div class="row justify-content-center">
                 <div class="col-4">
                     <label for="username">아이디</label>
