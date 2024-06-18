@@ -14,7 +14,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 // http://localhost:8080/user/~~~ : 이건 다 UserController로 불러오고 싶음
 @RequestMapping("/user/")
-@RequiredArgsConstructor
+@RequiredArgsConstructor // 생성자 만들 필요가 없어짐.
 public class UserController {
     // 실제 SQL 통신을 담당할 Service 객체
     @Autowired

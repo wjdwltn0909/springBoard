@@ -16,6 +16,7 @@ import javax.sql.DataSource;
 // 그리고, (2) 실행시킬 쿼리들은 xml에 파일로 분리하게 된다.
 // 그런 후에 (3) mybatis에서 쿼리를 실행시킬 객체들을 스프링이 관리할 수 있도록
 // 클래스를 만들어서 관리를 하게 된다.
+@Configuration
 public class MyBatisConfig {
     // (1) 컨트롤러, 서비스, 컨피겨레이션 같이 스프링 프레임워크가 직접 관리하는
     // 객체들 중 특수한 성격을 띄는 친구들은 우리가 직접 @Controller @Service'
